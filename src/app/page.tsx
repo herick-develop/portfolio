@@ -63,7 +63,7 @@ export default function Home() {
 
   const [technologies, setTechnologies] = useState<Technologies[]>([]);
 
-  const allTechnologies: Technologies[] = [{name:'NestJs'}, {name:'TailwindCss'}];
+  const allTechnologies: Technologies[] = [{name:'NestJs'}, {name:'TailwindCss'}, {name:'NextJs'}];
 
   const octokit = new Octokit({ 
     auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN
