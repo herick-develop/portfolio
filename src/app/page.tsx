@@ -203,21 +203,21 @@ export default function Home() {
 
               if(selectedDatabaseId === 1 || selectedDatabaseId === 4) {
                 return (
-                  <div className='overflow-auto w-full' style={{scrollbarWidth: 'none'}}>
+                  <div className='overflow-auto w-full' style={{scrollbarWidth: 'none', scrollbarColor: '#888 #c1c1c4'}}>
                     <Tabela tableData={databases.find(database => database.id === selectedDatabaseId)?.tables[0].columns ?? []} />
                   </div>
                 )
               } else if (selectedDatabaseId === 2) {
 
                 return(
-                  <div className='overflow-auto w-full' style={{scrollbarWidth: 'none'}}>
+                  <div className='overflow-auto w-full' style={{scrollbarWidth: 'none', scrollbarColor: '#888 #c1c1c4'}}>
                   <GitTable colrows={technologies}/>
                   </div>
                 )
               } else if (selectedDatabaseId === 3) {
                 const projectsProperties = projects.map(({ name, description }) => ({ name, description }));
                 return(
-                  <div className='overflow-auto w-full' style={{scrollbarWidth: 'none'}}>
+                  <div className='overflow-auto w-full' style={{scrollbarWidth: 'none', scrollbarColor: '#888 #c1c1c4'}}>
                   <GitTable colrows={projectsProperties}/>
                   </div>
                 )
