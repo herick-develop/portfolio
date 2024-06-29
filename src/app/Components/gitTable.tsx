@@ -66,9 +66,11 @@ const GitTable: React.FC<TabelaProps> = ({ columns, lines, colrows}) => {
                 const cellValue = row[header as keyof TabelaProps];
                 return (
                     <TableCell key={index} className="font-medium text-[#c1c1c4] border-[1px] border-[#202020] bg-[#5B5B5B] select-none cursor-n-resize">
-                        {cellValue != null && cellValue.toString().length > 64
-                            ? `${decodeURIComponent(escape(cellValue.toString())).slice(12, 64)}...`
-                            : decodeURIComponent(escape(cellValue?.toString() || ''))}
+                        {
+                          cellValue != null && cellValue.toString().length > 64
+                            ? `${decodeURIComponent(encodeURIComponent(cellValue.toString())).slice(12, 64)}...`
+                            : decodeURIComponent(encodeURIComponent(cellValue?.toString() || ''))
+                        }
                     </TableCell>
                 );
             })}
