@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "about",
-    "sql": "USE sobre;\nSHOW TABLES;\nSELECT id, title, description FROM about_me ORDER BY id;",
+    "sql": "USE about;\nSHOW TABLES;\nSELECT id, title, description FROM about_me ORDER BY id;",
     "tables":[{
       "id":1,
       "name": "about_me",
